@@ -1,4 +1,4 @@
-//whats up older me(or a pedestrian checking around), do you wanna feel better/and or laugh? here you go.
+// begineer cpde <lol>
 
 /**
  * @param {string} s
@@ -19,25 +19,11 @@ var romanToInt = function(s) {
         let char = s[index];
         number.push(map.get(char));
     }
-    // compare first and next, if first smaller, subtract
-    for (let index = 0; index < number.length - 1; index++) {
-        index1 = index + 1;
-        let a = number[index]
-        let b = number[index1]
-        if (a > b) {
-            let result = number.reduce((c, d) => c + d, 0)
-        }
-        else if (a === b) {
-            let result = number.reduce((c, d) => c + d, 0)
-        }
-        else{
-            let result = number.reduce((c, d) => c - d, 0)
-        }
-        //brain think a, b vars interfere a, b reduce input
-        //brain cant loop number, brain tired, brain stupid, brain can do dumb hardcode.
-        //brain dont know js, brain dont know to check how output positive(//brain cant loop number, brain tired, brain stupid, brain can do dumb hardcode.)
-    }
-    return(result);
-};
 
-//not finished yet, my brain nonexistent
+    let sum = 0;
+    for(let i = 0; i < number.length; i++) {
+        let currentInt = number[i];
+        sum = sum + currentInt;
+    }
+    return sum;
+}
