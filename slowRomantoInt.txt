@@ -1,10 +1,6 @@
 // begineer cpde <lol>
-
-/**
- * @param {string} s
- * @return {number}
- */
 var romanToInt = function(s) {
+
     let number = [];
     let map = new Map();
     map.set("I", 1);
@@ -23,7 +19,14 @@ var romanToInt = function(s) {
     let sum = 0;
     for(let i = 0; i < number.length; i++) {
         let currentInt = number[i];
+        let a = number[i];
+        let b = number[i + 1];
+        if(a < b) {
+            currentInt = b - a;
+            i++
+        }
         sum = sum + currentInt;
+        return sum;
     }
-    return sum;
 }
+romanToInt("MCMXCIV");
