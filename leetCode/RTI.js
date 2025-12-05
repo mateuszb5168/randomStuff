@@ -1,0 +1,31 @@
+// begineer cpde <lol>
+var romanToInt = function(s) {
+
+    let number = [];
+    let map = new Map();
+    map.set("I", 1);
+    map.set("V", 5);
+    map.set("X", 10);
+    map.set("L", 50);
+    map.set("C", 100);
+    map.set("D", 500);
+    map.set("M", 1000);
+    s = s.split("");
+    for (let index = 0; index < s.length; index++) {
+        let char = s[index];
+        number.push(map.get(char));
+    }
+
+    let sum = 0;
+    for(let i = 0; i < number.length; i++) {
+        let currentInt = number[i];
+        let a = number[i];
+        let b = number[i + 1];
+        if(a < b) {
+            currentInt = b - a;
+            i++
+        }
+        sum = sum + currentInt;
+        return sum;
+    }
+}
